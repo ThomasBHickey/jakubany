@@ -1,0 +1,41 @@
+read in 271 from nameMatches
+have 13387 lines to search
+Names to search:120 >> 9		18350120		"BAKA, Georgius"	"RIBOVITS, Catarina"	Stephan
+2700 >> 80	18760726			"DANYOV, Stephan"	"RIBOVICS, Anna"	Catharina		426
+3209 >> 62	18950626			"DUFFALA, Damianus"	"RIBOVICS, Catharina"	Stephan		194
+3709 >> 8	18930215			"FIRCSIA, Joannes"	"RIBOVICS, Catharina"	Stephan		31
+4226 >> 105	18840924			" (GULYASY, Stephan) PSML* 11-25-85"	"RIBOVICS, Anna (Joannes)"	Catharina *not illeg		26
+5096 >> 144	18731122			"HREBIK, Stephan"	"RIBOVICS, Anna"	Catharina		372
+7535 >> 13		18330130		"MATSUGA, Stephan"	"RIBOVITS, Catarina"	Eva
+7536 >> 34		18340406		"MATSUGA, Stephan"	"RIBOVITS, Katharina"	Anna
+7537 >> 21		18370306		"MATSUGA, Stephan"	"RIBOVITS, Catarina"	Stephan
+7538 >> 35		18390616		"MATSUGA, Stephan"	"RIBOVITS, Catharina"	Susanna
+7539 >> 73		18410718		"MATSUGA, Stephan"	"RIBOVITS, Catarina"	Eva
+7540 >> 99		18430818		"MATSUGA, Stephan"	"RIBOVITS, Catarina"	Simeon
+8180 >> 126		18301212		"MATISSAK, Andreas"	"RIBOVITS, Catarina"	Stephan  (twin?)
+10152 >> 105	18840924			" (GULYASY, Stephan) PSML* 11-25-85"	"RIBOVICS, Anna (Joannes)"	Catharina *not illeg		26
+10166 >> 103	18781230			     -----	"RIBOVICS, Catharina (Samuel)"	Stephan		30	 1-15-1879
+10280 >> 57	18710527			"RIBOVICS, Joannes"	"DUDA, Catharina"	Stephan		392
+10365 >> 93		18211104		"RIBOVITS, Joseph"	  Catharina	Stephan
+10386 >> 109		18430916		"RIBOVITS, Joseph"	"KRAJNYAK, Catarina"	Stephan (twin)
+10520 >> 65		18430521		"RIBOVITS, Stephan"	"ALEXOVITS, Eva"	Catarina
+10524 >> 62	18650727			"RIBOVICS, Stephan"	"FABER, Catharina"	Anna	F	28
+10525 >> 17	18750127			"RIBOVICS, Stephan"	"FABER, Catharina"	Stephan		28
+10533 >> 2		18370115		"RIBOVITS, Stephan"	"SCHUSZTER, Catharina"	Catharina
+10534 >> 33		18380401		"RIBOVITS, Stephan"	"SCHUSZTER, Catarina"	Stephan
+10535 >> 87		18400823		"RIBOVITS, Stephan"	"SCHUSZTER, Catarina"	Andreas
+10536 >> 21		18430214		"RIBOVITS, Stephan"	"SCHUSZTER, Catarina"	Eva
+10540 >> 28	18520320			"RIBOVICZ, Stephan"	"SCHUSZTER, Catharina"	Anna		364
+10541 >> 60	18560730			"RIBOVICS, Stephan"	"SCHUSZTER, Catharina"	Catharina		366	 1-30-1933
+10542 >> 52	18590812			"RIBOVICS, Stephan"	"SCHUSZTER, Catharina"	Joseph		366
+10543 >> 75	18640709			"RIBOVICS, Stephan"	"SCHUSZTER, Catharina"	Simeon		366
+10544 >> 8	18690111			"RIBOVICS, Stephan"	"VATAHA, Catharina"	Joseph	F	388
+10545 >> 84	18721129			"RIBOVICS, Stephan"	"VATAHA, Catharina"	Stephan		388	 10-26-1876
+10549 >> 58	18800607			"RIBOVICS, Stephan"	"ZAVALIDRUGA, Catharina"	Catharina		366
+10550 >> 73	18810702			"RIBOVICS, Stephan"	"ZAVALYIDRYGA, Catharina"	Susanna		409
+10551 >> 17	18830202			"RIBOVICS, Stephan"	"ZAVALIDRYGA, Catharina"	Catharina		430
+10552 >> 40	18850407			"RIBOVICS, Stephan"	"ZAVALYIDRYGA, Catharina"	Stephan		430
+10553 >> 39	18880326			"RIBOVICS, Stephan"	"ZAVALIDRYGA, Catharina"	Joannes		430
+10554 >> 58	18900721			"RIBOVICS, Stephan"	"ZAVALYIDRYGA, Catharina"	Joseph		330
+10555 >> 58	18930906			"RIBOVICS, Stephan"	"ZAVALIDRIGA, Catharina"	Anna		430	 4-10-1898
+12261 >> 103	18801006			"VARGA, Joannes"	"RIBOVICS, Catharina"	Stephan		94

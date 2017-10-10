@@ -21,8 +21,8 @@ def readNameGroups(fname):
     print(ngs)
     return ngs
 
-stopWords = readStopWords('stopWords.txt')
-nameGroups = readNameGroups('manualGroups.txt')
+stopWords = readStopWords('mandata/stopWords.txt')
+nameGroups = readNameGroups('mandata/manualGroups.txt')
 names = Counter()
 for ng in nameGroups:
     for name in ng:
@@ -63,24 +63,24 @@ for line in sys.stdin:
 
 print("found", len(sheetLines), 'lines')
 
-def findLastNames(line):
-    #print('line:', line)
-    lnames = []
-    pos = 0
-    length = len(line)
-    #curName = ''
-    inName = 0
-    while pos < length:
-        if line[pos].isupper():
-            curName = ''
-            while pos<length and line[pos].isupper():
-                curName = curName + line[pos]
-                pos = pos+1
-            if len(curName)>1 and not curName in ['NO', 'LAST', 'NAME']:
-                lnames.append(curName.lower())
-        pos = pos+1
-    #print('lnames:', lnames)
-    return lnames
+# def findLastNames(line):
+#     #print('line:', line)
+#     lnames = []
+#     pos = 0
+#     length = len(line)
+#     #curName = ''
+#     inName = 0
+#     while pos < length:
+#         if line[pos].isupper():
+#             curName = ''
+#             while pos<length and line[pos].isupper():
+#                 curName = curName + line[pos]
+#                 pos = pos+1
+#             if len(curName)>1 and not curName in ['NO', 'LAST', 'NAME']:
+#                 lnames.append(curName.lower())
+#         pos = pos+1
+#     #print('lnames:', lnames)
+#     return lnames
 
 def findNames(line):
     names = []
@@ -110,8 +110,8 @@ for sline in sheetLines:
 print('found %d different names'% len(names))
 
 def putInGroup(name, group):
-    if name in group:
-        return 0
+    # if name in group:
+    #     return 0
     matchCount = 0
     dbg = 0#name in ['orina']
     if dbg:
@@ -131,13 +131,18 @@ def putInGroup(name, group):
         #print('Not quite a match:', name, group)
     return goodMatch #(matchCount>1) or (matchCount >= (len(group)+1)//2)
 
-nameGroupIndex = {}
+#nameGroupIndex = {}
+print('initial nameGroups:', nameGroups)
 for name, count in names.most_common():
     if len(name)==1:
         print('single char name', name, count)
     foundGroup = 0
+    dbg = name== 0 #'anastasia'
     for gp, group in enumerate(nameGroups):
-        dbg = name=='susanna'
+        if dbg: print('looking at:', name)
+        if name in group:
+            foundGroup = 1
+            break
         if putInGroup(name, group):
             if dbg:
                 print('adding', name, 'to', gp, group)
@@ -156,7 +161,7 @@ for name, count in names.most_common():
 print('Number of nameGroups', len(nameGroups))
 print('Singleton groups:', sum([1 for ng in nameGroups if len(ng)==1]))
 
-ofile = open('nameMatchesRaw', 'w')
+ofile = open('nameMatchesNew', 'w')
 for ngroup in sorted(nameGroups):
     if len(ngroup)>1:
         ofile.write(':'.join(ngroup))

@@ -10,10 +10,12 @@ def readNameGroups(fname):
     print('read in', len(ngs), 'from', fname)
     return ngs
 
-nameGroups = readNameGroups('nameMatchesRaw')
+nameGroups = readNameGroups('nameMatches')
 
 lines = open(sys.argv[1]).readlines()
 #lines = lines[:17]
+inMarriageFile = 'Marriages' in sys.argv[1]
+inBaptismFile = 'Baptisms' in sys.argv[1]
 print('have', len(lines),'lines to search')
 
 def getPos(term, sline):
@@ -26,9 +28,21 @@ def getPos(term, sline):
 def getTerms(s):
 	terms = []
 	for rawterm in s.lower().split():
-		t = ''.join([c for c in rawterm if c.isalpha()])
+		t = ''
+		for c in rawterm:
+			if c.isalpha():
+				t += c
 		if len(t):
 			terms.append(t)
+	# print('rows[7]:"%s"'%rows[7])
+	rows = s.split('\t')
+	if inMarriageFile:
+		for rn in [6,7]:
+			if rows[rn].strip().isdigit():
+				terms.append('house:%s'%rows[rn].strip())
+	if inBaptismFile:
+		if rows[8].strip().isdigit():
+			terms.append('house:%s'%rows[8].strip())
 	return terms
 
 while 1:
@@ -45,11 +59,15 @@ while 1:
 				groupsToUse[-1] = ng
 				break
 
-	print('using', groupsToUse)
+	print('using', groupsToUse, file=sys.stderr)
 	linePos = 0
 	linesFound = 0
 	for line in lines:
 		linePos += 1
+		# if linePos==1731:
+		# 	splitLine = line.split('\t')
+		# 	for r in range(len(splitLine)):
+		# 		print(r, splitLine[r].strip())
 		slowline = getTerms(line)
 		#print('slowline:', slowline)
 		groupPos = len(groupsToUse)*[-1]
@@ -63,7 +81,8 @@ while 1:
 					break
 		#print('groupPos:', groupPos)
 		if min(groupPos)!=-1:
-			print('>>', line.rstrip())
+			print(linePos, '>>', line.rstrip())
 			linesFound += 1
-	print('Found', linesFound,'lines')
+	break
+	print('Found', linesFound,'lines', file=sys.stderr)
 
